@@ -1,0 +1,61 @@
+# Project Organization
+plan.txt
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# .env file for environment variables
+.env
+
+# Python virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# MacOS specific files
+.DS_Store
+
+# Linux specific files
+*~
+
+# Windows specific files
+Thumbs.db
+Desktop.ini
+
+# Django migrations
+*/migrations/*
+
+# Jupyter notebook checkpoints
+.ipynb_checkpoints
+
+# coverage.py
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# mypy
+.mypy_cache/
+
+# pyre
+.pyre/
+
+# linting tools
+pylint_report.txt
+pylint_output.txt
