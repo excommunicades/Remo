@@ -16,7 +16,7 @@ class Restaurants(models.Model):
     created_at = models.DateField(auto_now_add=True)
 
     class Meta:
-        db_table = 'Restaurants'
+        db_table = 'Restaurants' 
 
 class Restaurants_Reviews(models.Model):
 
