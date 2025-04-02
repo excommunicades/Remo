@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'leaflet',
     'picklefield', 
     'django_q',
-
+ 
     'blessed',
 
     'django_redis',
