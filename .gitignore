@@ -10,10 +10,13 @@ __pycache__/
 db.sqlite3
 media/
 staticfiles/
+pyproject.toml
+.python-version
+uv.lock
 
 # .env file for environment variables
 .env
-
+ 
 # Python virtual environment
 venv/
 env/
