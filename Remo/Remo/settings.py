@@ -35,7 +35,7 @@ GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so'
 # Application definition
 
 INSTALLED_APPS = [
-
+ 
     "crispy_forms",
     "crispy_bootstrap4",
     'debug_toolbar',
