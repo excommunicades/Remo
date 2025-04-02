@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-dl-7fb3@5cyj@bsyosqtnro(mya127sdz1_p4@o50s@(ad88am
 DEBUG = True
 
 ALLOWED_HOSTS = []
-GDAL_LIBRARY_PATH = '/usr/lib/x86_64-linux-gnu/libgdal.so.34'
+GDAL_LIBRARY_PATH = '/usr/lib/libgdal.so'
 
 
 # Application definition
