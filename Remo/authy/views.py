@@ -6,8 +6,8 @@ from django.contrib import messages
 from django.core.exceptions import ValidationError
 
 def login_or_register(request):
+
     if request.method == 'POST':
-        print(request.method)
         if 'login_username' in request.POST:
 
             username = request.POST.get('login_username')

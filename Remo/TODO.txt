@@ -1,0 +1,4 @@
+TODO: 
+1. uprade errors (under field, better catcher/render. Field patterns.)
+2. dockstrings to functions/urls/etc. 
+3. profile_min
