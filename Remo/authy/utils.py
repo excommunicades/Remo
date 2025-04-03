@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 
+from user_profile.models import UserProfile
+
 def registration_logic_function(request, username, email, password, confirm_password):
 
     ''' Validate data, create user, return response to server. '''
@@ -23,7 +25,8 @@ def create_user(username, email, password):
     ''' Create user by args. '''
 
     try:
-        User.objects.create_user(username=username, email=email, password=password)
+        user = User.objects.create_user(username=username, email=email, password=password)
+        UserProfile.objects.create(user=user)
         return JsonResponse({'status': 'success', 'redirect': '/restaurants/main'})
     except ValidationError as e:
         return JsonResponse({'status': 'error', 'type': 'registration', 'error_field': 'Form', 'error': 'Error.'})

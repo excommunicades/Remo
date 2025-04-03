@@ -1,2 +1,6 @@
 TODO: 
-3. profile_min
+
+1. Upgrade profile
+2. Provide retaurant creation
+3. Update restaurant
+4. List of restaurants

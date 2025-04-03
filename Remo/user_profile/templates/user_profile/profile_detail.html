@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{profile.user.username}} Profile</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'user_profile/css/style.css' %}">
+</head>
+<body>
+
+    <div class="container-lg centered-container" x-data="formValidation" style='padding-top:150px'>
+        <div class=' d-flex justify-content-center'>
+            <div class="row">
+                <h1>Profile</h1>
+            </div>
+        </div>
+        <div class=' d-flex justify-content-center' style='padding-top:100px'>
+            <div class='col-lg-2'></div>
+            <div class='col-lg-4'>
+                <img class='avatar' src='https://png.pngtree.com/png-vector/20220709/ourmid/pngtree-businessman-user-avatar-wearing-suit-with-red-tie-png-image_5809521.png'>
+            </div>
+            <div class='col-lg-2'>
+                <div class='UserLocation' style='padding-top:100px'>Location: {{profile.location}}</div>
+                <div class='UserLocation' style='padding-top:50px; position:absolute; width:500px;'>About me: <br><br>{{profile.bio}}</div>
+            </div>
+            <div class='col-lg-4'>
+                <div class='UserName'><h2>{{profile.user.username}}</h2></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'user_profile/js/script.js' %}"></script>
+    <script src="{% static 'user_profile/js/alphine.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</body>
+</html>
