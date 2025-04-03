@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'restaurants',
-    'authy'
+    'authy',
+    'user_profile',
 ]
 
 MIDDLEWARE = [
