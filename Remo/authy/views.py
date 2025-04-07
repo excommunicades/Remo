@@ -25,7 +25,7 @@ def login_or_register(request):
 
             if user is not None:
                 login(request, user)
-                return JsonResponse({'status': 'success', 'redirect': '/restaurants/main'})
+                return JsonResponse({'status': 'success', 'redirect': '/profile'})
             else:
                 return JsonResponse({'status': 'error', 'type': 'login', 'error_field': 'Password', 'error': 'Wrong Password.'})
 
