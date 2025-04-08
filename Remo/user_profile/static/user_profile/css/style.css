@@ -25,15 +25,20 @@
   text-align: center;
   outline: none !important;
 }
-.profileLocation.hidden{
+.hidden{
   display: none;
 }
-.profileBio.hidden{
-  display: none;
+.FormSubmitBtn{
+  margin: 100px 0px 0px 0px;
+  padding: 0;
+  background-color: white;
+  border: 0px solid;
+  opacity: 60%;
+  transition: opacity 0.3s;
+  text-decoration: underline;
+
 }
-.updateUserLocation.hidden{
-  display: none;
-}
-.updateUserAbout.hidden{
-  display: none;
+
+.FormSubmitBtn:hover{
+  opacity: 100%;
 }

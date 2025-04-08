@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <div class="container-lg centered-container" x-data="formValidation" style='padding-top:150px'>
+    <div class="container-lg centered-container" style='padding-top:150px'>
         <div class=' d-flex justify-content-center'>
             <div class="row">
                 <h1>Profile</h1>
@@ -22,7 +22,9 @@
                 <div id='updateProfileLink'>Update profile</div>
             </div>
         </div>
-        <form method='post' class='UpdateProfileForm' hx-post="/update" hx-swap="none">
+        <form hx-post='/profile/update/' hx-swap="none" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+            {% csrf_token %}
+            <input type="hidden" name="_method" value="PATCH">
             <div class=' d-flex justify-content-center' style='padding-top:100px'>
                 <div class='col-lg-2'></div>
                 <div class='col-lg-4'>
@@ -31,13 +33,14 @@
                 <div class='col-lg-2'>
                     <div class='UserLocation' style='padding-top:100px'>
                     Location: <span class='profileLocation'>{{profile.location}}</span>
-                    <input class='updateUserLocation hidden' type='text' placeholder='{{profile.location}}'>
+                    <input class='updateUserLocation hidden' name='location' type='text' placeholder='{{profile.location}}'>
                     </div>
-                    <div class='UserAbout' style='padding-top:50px; position:absolute; width:500px;'>
-                        About me: <textarea class='updateUserAbout hidden' type='text' style='padding-top:50px; position:absolute; min-width:500px;'>{{profile.bio}}</textarea>
+                    <div class='UserAbout' style='padding-top:50px'>
+                        About me: <textarea class='updateUserAbout hidden' type='text' name='bio' style='padding-top:50px; position:absolute; min-width:500px;'>{{profile.bio}}</textarea>
                         <br><br>
-                        <span class='profileBio'>{{profile.bio}}</span>
+                        <span class='profileBio' style='width:500px !important;'>{{profile.bio}}</span>
                     </div>
+                    <button type='submit' class='FormSubmitBtn hidden'> -> Update</button>
                 </div>
                 <div class='col-lg-4'>
                     <div class='UserName' style='justify-content: space-between;'>

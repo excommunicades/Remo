@@ -1,4 +1,5 @@
 document.addEventListener('alpine:init', () => {
+    
 
     Alpine.data('formValidation', () => ({
         successMessage: '',
